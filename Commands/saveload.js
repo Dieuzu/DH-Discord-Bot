@@ -49,6 +49,7 @@ exports.saveload = async function (command, message, creatorid, args, db, datata
     }
 
     if (command === "fixroles") {
+        /*
         let rd = {mage:         {id0: {name: "nil", timestamp: 0}}, 
                   vampire:      {id0: {name: "nil", timestamp: 0}}, 
                   protector:    {id0: {name: "nil", timestamp: 0}}, 
@@ -60,6 +61,18 @@ exports.saveload = async function (command, message, creatorid, args, db, datata
                   reaper:       {id0: {name: "nil", timestamp: 0}}, 
                   tormentor:    {id0: {name: "nil", timestamp: 0}}, 
                   ranger:       {id0: {name: "nil", timestamp: 0}}};
+        */
+        let rd = {mage:         {}, 
+                  vampire:      {}, 
+                  protector:    {}, 
+                  bard:         {}, 
+                  assassin:     {}, 
+                  warrior:      {}, 
+                  priest:       {}, 
+                  marksman:     {}, 
+                  reaper:       {}, 
+                  tormentor:    {}, 
+                  ranger:       {}};
         let asdf = JSON.stringify(rd);
         db.set("roledata", asdf).then(() => {});
         return
