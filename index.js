@@ -29,7 +29,7 @@ require('dotenv').config();
     var testS = require('./test.js');                //
 
 // ------------------------------------------------------ Constants
-  const { ReactionRole } = require("reaction-role");
+  // const { ReactionRole } = require("reaction-role");
   const Discord = require("discord.js");
   const client =  new ReactionRole();
   const version = '3.0.1';
