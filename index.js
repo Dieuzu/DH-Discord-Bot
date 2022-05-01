@@ -54,7 +54,8 @@ let taskLog = [], taskSign = [], taskComp = [];
 
 // let datatable = {};                 // Data table for saving info across restarts..
 db.get("testdata").then(value => {
-  let datatable = JSON.parse(value);
+  console.log(value);
+  // let datatable = JSON.parse(value);
 });
 //------------------------------------------------------
 act.bootActives(client, console, guildcount, members, activity); //bootactivity.js
