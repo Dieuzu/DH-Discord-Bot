@@ -34,7 +34,7 @@ exports.saveload = async function (command, message, creatorid, args, db, datata
 
                 // mageobj.mage.concat(message.author.id);
                 let date = new Date();
-                mageobj.mage["id" + message.author.id] = {name: message.author.tag, timestamp: date.getTime().toUTCString()};
+                mageobj.mage["id" + message.author.id] = {name: message.author.tag, timestamp: date.getTime()};
                 
                 // Save to db
                     let sobj = JSON.stringify(mageobj);
