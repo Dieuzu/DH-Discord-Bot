@@ -21,4 +21,41 @@ exports.saveload = async function (command, message, creatorid, args, db, datata
         }
     }
 
+    // add mage
+    if(command === "addmage") {
+
+        try {
+            db.get("roledata").then(value => {
+                // Load from db
+                    let mageobj = JSON.parse(value);
+                    let curr = mageobj.mage[message.author.id];
+
+                if (curr) return message.reply(`you are already registered as a mage!`)
+
+                mageobj.mage[message.author.id] = {name: message.author.tag}
+                
+                // Save to db
+                    let sobj = JSON.stringify(mageobj);
+                    db.set("roledata", sobj).then(() => {});
+                
+                return message.reply(`you have been added.`);
+            });
+        } catch (e) {
+            console.log(e);
+        }
+        
+    }
+
 };
+
+// let roledata = {mage: [], vampire: [], protector: [], bard: [], assassin: [], warrior: [], priest: [], marksman: [], reaper: [], tormentor: [], ranger: []};
+/*
+
+roledata.mage[message.author.id] = {name: message.author.tag};
+
+let roledata = {
+    mage: {
+        `${userid}`: {name: "XXXX", joined: "07:02 @ 01.05.2022"}
+    },
+};
+*/
