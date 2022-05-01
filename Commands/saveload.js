@@ -49,19 +49,7 @@ exports.saveload = async function (command, message, creatorid, args, db, datata
     }
 
     if (command === "fixroles") {
-        /*
-        let rd = {mage:         {id0: {name: "nil", timestamp: 0}}, 
-                  vampire:      {id0: {name: "nil", timestamp: 0}}, 
-                  protector:    {id0: {name: "nil", timestamp: 0}}, 
-                  bard:         {id0: {name: "nil", timestamp: 0}}, 
-                  assassin:     {id0: {name: "nil", timestamp: 0}}, 
-                  warrior:      {id0: {name: "nil", timestamp: 0}}, 
-                  priest:       {id0: {name: "nil", timestamp: 0}}, 
-                  marksman:     {id0: {name: "nil", timestamp: 0}}, 
-                  reaper:       {id0: {name: "nil", timestamp: 0}}, 
-                  tormentor:    {id0: {name: "nil", timestamp: 0}}, 
-                  ranger:       {id0: {name: "nil", timestamp: 0}}};
-        */
+
         let rd = {mage:         {}, 
                   vampire:      {}, 
                   protector:    {}, 
@@ -76,6 +64,7 @@ exports.saveload = async function (command, message, creatorid, args, db, datata
         let asdf = JSON.stringify(rd);
         db.set("roledata", asdf).then(() => {});
         return
+
     }
 
     if (command === "printroles") {
@@ -87,14 +76,3 @@ exports.saveload = async function (command, message, creatorid, args, db, datata
 
 };
 
-// let roledata = {mage: [], vampire: [], protector: [], bard: [], assassin: [], warrior: [], priest: [], marksman: [], reaper: [], tormentor: [], ranger: []};
-/*
-
-roledata.mage[message.author.id] = {name: message.author.tag};
-
-let roledata = {
-    mage: {
-        `${userid}`: {name: "XXXX", joined: "07:02 @ 01.05.2022"}
-    },
-};
-*/
