@@ -1,4 +1,4 @@
-exports.saveload = async function (command, message, creatorid, args, db) {
+exports.saveload = async function (command, message, creatorid, args, db, datatable) {
     
     // save command
     if(command === "save") {
