@@ -23,12 +23,6 @@ exports.saveload = async function (command, message, creatorid, args, db, datata
 
     // add mage
     if(command === "addmage") {
-        /*
-        let rd = {mage: [], vampire: [], protector: [], bard: [], assassin: [], warrior: [], priest: [], marksman: [], reaper: [], tormentor: [], ranger: []};
-        let asdf = JSON.stringify(rd);
-        db.set("roledata", asdf).then(() => {});
-        return
-        */
 
         try {
             db.get("roledata").then(value => {
@@ -50,6 +44,23 @@ exports.saveload = async function (command, message, creatorid, args, db, datata
             console.log(e);
         }
         
+    }
+
+    if (command === "fixroles") {
+        let rd = {mage:         {id0: {name: "nil", timestamp: 0}}, 
+                  vampire:      {id0: {name: "nil", timestamp: 0}}, 
+                  protector:    {id0: {name: "nil", timestamp: 0}}, 
+                  bard:         {id0: {name: "nil", timestamp: 0}}, 
+                  assassin:     {id0: {name: "nil", timestamp: 0}}, 
+                  warrior:      {id0: {name: "nil", timestamp: 0}}, 
+                  priest:       {id0: {name: "nil", timestamp: 0}}, 
+                  marksman:     {id0: {name: "nil", timestamp: 0}}, 
+                  reaper:       {id0: {name: "nil", timestamp: 0}}, 
+                  tormentor:    {id0: {name: "nil", timestamp: 0}}, 
+                  ranger:       {id0: {name: "nil", timestamp: 0}}};
+        let asdf = JSON.stringify(rd);
+        db.set("roledata", asdf).then(() => {});
+        return
     }
 
     if (command === "printroles") {
