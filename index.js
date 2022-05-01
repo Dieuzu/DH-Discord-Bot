@@ -52,9 +52,9 @@ let c = 0 ;                           // part of the "there it goes again code"
 let DMActive = new Array();
 let taskLog = [], taskSign = [], taskComp = [];
 
-let datatable = {};                 // Data table for saving info across restarts..
+// let datatable = {};                 // Data table for saving info across restarts..
 db.get("testdata").then(value => {
-  datatable = JSON.parse(value);
+  let datatable = JSON.parse(value);
 });
 //------------------------------------------------------
 act.bootActives(client, console, guildcount, members, activity); //bootactivity.js
