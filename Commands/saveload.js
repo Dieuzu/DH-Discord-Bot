@@ -11,12 +11,21 @@ exports.saveload = async function (command, message, creatorid, args, db, datata
 
     // load command
     if (command === "load") {
-        currdata = readdata("testdata", db, message);
+        let currdata = await getData("testdata", db);
         if (currdata) return message.reply(`Loaded Info: ${currdata.event}\nSaved by: ${currdata.author}`);
     }
 
 };
 
+function getData(key, db) {
+    try {
+        let data = JSON.parse(await db.get(key));
+        return data;
+    } catch (e) {
+        console.log(e);
+    }
+};
+/*
 function readdata(key, db, message) {
     try {
         db.get(key).then(value => { 
@@ -28,3 +37,4 @@ function readdata(key, db, message) {
         console.log(e);
     };
 };
+*/
