@@ -1,4 +1,6 @@
 exports.saveload = async function (command, message, creatorid, args, db, datatable) {
+
+    if (!creatorid.includes(message.author.id)) return; // Checks if krizzi or speedy is msg author
     
     // save command
     if(command === "save") {
