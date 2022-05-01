@@ -36,7 +36,7 @@ exports.saveload = async function (command, message, creatorid, args, db, datata
                     let mageobj = JSON.parse(value);
                     let curr = mageobj.mage[message.author.id];
 
-                if (curr) return message.reply(`you are already registered as a mage!`)
+                if (curr) return message.reply(`you are already registered as a mage!`);
 
                 mageobj.mage[message.author.id] = [message.author.tag];
                 
@@ -50,6 +50,13 @@ exports.saveload = async function (command, message, creatorid, args, db, datata
             console.log(e);
         }
         
+    }
+
+    if (command === "printroles") {
+        db.get("roledata").then(value => {
+            message.channel.send(`Roletable:\n${value}`);
+            return;
+        });
     }
 
 };
