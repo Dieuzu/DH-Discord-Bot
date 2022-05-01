@@ -101,7 +101,7 @@ client.on("message", async message => {
 	const command = args.shift().toLowerCase();
   //================== Dont Mess above ==============
   
-  savl.saveload(command, message, creatorid, args, datab)
+  savl.saveload(command, message, creatorid, args, db)
 
   gdm.gidDM(command, message, args, client, speedy, krizzi);
 
