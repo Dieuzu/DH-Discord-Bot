@@ -23,10 +23,12 @@ exports.saveload = async function (command, message, creatorid, args, db, datata
 
     // add mage
     if(command === "addmage") {
+        /*
         let rd = {mage: [], vampire: [], protector: [], bard: [], assassin: [], warrior: [], priest: [], marksman: [], reaper: [], tormentor: [], ranger: []};
         let asdf = JSON.stringify(rd);
         db.set("roledata", asdf).then(() => {});
         return
+        */
 
         try {
             db.get("roledata").then(value => {
