@@ -28,13 +28,13 @@ exports.saveload = async function (command, message, creatorid, args, db, datata
             db.get("roledata").then(value => {
                 // Load from db
                     let mageobj = JSON.parse(value);
-                    let curr = mageobj.mage[message.author.id];
+                    let curr = mageobj.mage["id" + message.author.id];
 
                 if (curr) return message.reply(`you are already registered as a mage!`);
 
                 // mageobj.mage.concat(message.author.id);
-
-                mageobj.mage["id" + message.author.id] = {name: message.author.tag, timestamp: message.timestamp};
+                let date = new Date();
+                mageobj.mage["id" + message.author.id] = {name: message.author.tag, timestamp: date.getTime() + " @ " + date.getDate()};
                 
                 // Save to db
                     let sobj = JSON.stringify(mageobj);
