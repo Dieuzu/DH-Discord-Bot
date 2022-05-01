@@ -5,6 +5,7 @@ var killc = require('./Commands/kill.js');       //
 var adminc = require('./Commands/admin.js');     //
 var hm = require('./Commands/helpme.js');        //
 var ver = require('./Commands/version.js');      //
+var savl = require('./Commands/saveload.js');      //
 var bs = require('./Commands/activity.js');      //
 var rp = require('./Commands/roleplay.js');      //
 var rc = require('./Commands/rolecmds.js');      //
@@ -33,12 +34,16 @@ const Discord = require("discord.js");
 const client =  new ReactionRole();
 const version = '3.0.1';
 const readline = require('readline');
+  // Database in repl
+    const Database = require("@replit/database"); 
+    const db = new Database();
 //------------------------------------------------------ People Constants
 const creator = 'Dieuzu#2369 & Krizzi#4234'
 const bot = '<FIll something here>'
 const speedy = '169685782494314496';
 const immune = '169685782494314496'
 const krizzi = '389172252786163727';
+const creatorid = ["169685782494314496", "389172252786163727"];
 //------------------------------------------------------ Initializing Global Variables
 let guildcount = 0;
 let members = 0;
@@ -46,6 +51,11 @@ let activity = []  ;                  // Initialize activity here, add content a
 let c = 0 ;                           // part of the "there it goes again code"
 let DMActive = new Array();
 let taskLog = [], taskSign = [], taskComp = [];
+
+let datatable = {};                 // Data table for saving info across restarts..
+db.get("key").then(value => {
+  datatable = JSON.parse(value);
+});
 //------------------------------------------------------
 act.bootActives(client, console, guildcount, members, activity); //bootactivity.js
 
@@ -89,7 +99,9 @@ client.on("message", async message => {
   if (!message.content.startsWith(process.env.PREFIX)) return; // Check for prefix
   const args = message.content.slice(process.env.PREFIX.length).trim().split(/ +/g);
 	const command = args.shift().toLowerCase();
-  //================== Dont Mess above ============== 
+  //================== Dont Mess above ==============
+  
+  savl.saveload(command, message, creatorid, args, datab)
 
   gdm.gidDM(command, message, args, client, speedy, krizzi);
 
