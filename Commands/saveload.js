@@ -2,10 +2,8 @@ exports.saveload = async function (command, message, creatorid, args, db, datata
     
     // save command
     if(command === "save") {
-
         let data = {event: "data1234 - asdfasdf", author: message.author.id};
         let sobj = JSON.stringify(data); // Writes object into string
-
         db.set("testdata", sobj).then(() => {}); // Writes to db under key: testdata
         
         message.reply(`Saved information to data table`);
@@ -13,21 +11,18 @@ exports.saveload = async function (command, message, creatorid, args, db, datata
 
     // load command
     if (command === "load") {
-
-        db.get("testdata").then(value => {
-            datatable = JSON.parse(value);
-            console.log(value);
-        });
-
-        message.reply(`Loaded Info: ${datatable.event}\nSaved by: ${datatable.author}`);
+        let currdata = JSON.parse(readdata("testdata", db));
+        if (currdata) return message.reply(`Loaded Info: ${currdata.event}\nSaved by: ${currdata.author}`);
     }
 
-    if (command === "displaydt") {
-        db.get("testdata").then(value => {
-            // datatable = JSON.parse(value);
-            console.log(value);
-        });
-        // message.reply(`Loaded Info: ${datatable.event}\nSaved by: ${datatable.author}`);
-    }
+};
 
+function readdata(key, db) {
+    try {
+        db.get(key).then(value => {
+            return value;
+        });
+    } catch (e) {
+        console.log(e);
+    }
 };
