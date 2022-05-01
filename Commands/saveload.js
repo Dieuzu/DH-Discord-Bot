@@ -11,15 +11,19 @@ exports.saveload = async function (command, message, creatorid, args, db, datata
 
     // load command
     if (command === "load") {
-        let currdata = readdata("testdata", db);
+        currdata = readdata("testdata", db, message);
         if (currdata) return message.reply(`Loaded Info: ${currdata.event}\nSaved by: ${currdata.author}`);
     }
 
 };
 
-function readdata(key, db) {
+function readdata(key, db, message) {
     try {
-        db.get(key).then(value => {return JSON.parse(value)});
+        db.get(key).then(value => { 
+            let currdata = JSON.parse(value)
+            message.reply(`Loaded Info: ${currdata.event}\nSaved by: ${currdata.author}`);
+            return currdata;
+        });
     } catch (e) {
         console.log(e);
     };
