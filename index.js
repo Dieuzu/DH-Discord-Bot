@@ -19,7 +19,7 @@ require('dotenv').config();
     var act = require('./Boot/bootactivity.js');     //
     var greet = require('./Boot/greetings.js');      //
     var rpcl = require('./Boot/cmdless.js');         //
-    var rr = require('./Boot/reactionroles.js');     //
+    // var rr = require('./Boot/reactionroles.js');     //
     var sc = require('./Boot/chatter.js');           //
     var wcum = require('./Boot/welcomeMsg.js');      //
     var gc = require('./Boot/guildCount.js');        //
