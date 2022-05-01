@@ -11,7 +11,7 @@ exports.saveload = async function (command, message, creatorid, args, db, datata
 
     // load command
     if (command === "load") {
-        let currdata = JSON.parse(readdata("testdata", db));
+        let currdata = readdata("testdata", db);
         if (currdata) return message.reply(`Loaded Info: ${currdata.event}\nSaved by: ${currdata.author}`);
     }
 
@@ -19,10 +19,8 @@ exports.saveload = async function (command, message, creatorid, args, db, datata
 
 function readdata(key, db) {
     try {
-        db.get(key).then(value => {
-            return value;
-        });
+        db.get(key).then(value => {return JSON.parse(value)});
     } catch (e) {
         console.log(e);
-    }
+    };
 };
