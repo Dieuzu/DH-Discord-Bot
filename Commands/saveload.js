@@ -22,4 +22,12 @@ exports.saveload = async function (command, message, creatorid, args, db) {
         message.reply(`Loaded Info: ${datatable.event}\nSaved by: ${datatable.author}`);
     }
 
+    if (command === "displaydt") {
+        db.get("testdata").then(value => {
+            datatable = JSON.parse(value);
+            console.log(value);
+        });
+        // message.reply(`Loaded Info: ${datatable.event}\nSaved by: ${datatable.author}`);
+    }
+
 };
