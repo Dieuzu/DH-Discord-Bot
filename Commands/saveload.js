@@ -32,7 +32,7 @@ exports.saveload = async function (command, message, creatorid, args, db, datata
 
                 if (curr) return message.reply(`you are already registered as a mage!`)
 
-                mageobj.mage[message.author.id] = {name: message.author.tag}
+                mageobj.mage[message.author.id] = [message.author.tag];
                 
                 // Save to db
                     let sobj = JSON.stringify(mageobj);
