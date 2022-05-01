@@ -19,7 +19,7 @@ require('dotenv').config();
     var act = require('./Boot/bootactivity.js');     //
     var greet = require('./Boot/greetings.js');      //
     var rpcl = require('./Boot/cmdless.js');         //
-    // var rr = require('./Boot/reactionroles.js');     //
+    var rr = require('./Boot/reactionroles.js');     //
     var sc = require('./Boot/chatter.js');           //
     var wcum = require('./Boot/welcomeMsg.js');      //
     var gc = require('./Boot/guildCount.js');        //
@@ -29,7 +29,7 @@ require('dotenv').config();
     var testS = require('./test.js');                //
 
 // ------------------------------------------------------ Constants
-  // const { ReactionRole } = require("reaction-role");
+  const { ReactionRole } = require("reaction-role");
   const Discord = require("discord.js");
   const client =  new ReactionRole();
   const version = '3.0.1';
@@ -56,7 +56,7 @@ require('dotenv').config();
 
   gc.Gcunt(client, console, guildcount, members, activity);
 
-  // rr.reactionRole(client);
+  rr.reactionRole(client);
 
   wcum.Welcum(client, console);
 
