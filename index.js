@@ -53,7 +53,7 @@ let DMActive = new Array();
 let taskLog = [], taskSign = [], taskComp = [];
 
 let datatable = {};                 // Data table for saving info across restarts..
-db.get("key").then(value => {
+db.get("testdata").then(value => {
   datatable = JSON.parse(value);
 });
 //------------------------------------------------------
