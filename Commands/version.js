@@ -1,4 +1,4 @@
-exports.version = async function (command, message, speedy, version, creator) {
+exports.version = async function (command, message, speedy, version, creator) {//
     // version command 
     if(command === "version356735467234562456234") {
         const vm = await message.channel.send("***Getting Version info...***");

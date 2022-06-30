@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config(); //
 // ------------------------------------------------------ All Modules!
   // commands folder
     var killc = require('./Commands/kill.js');       //

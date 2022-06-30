@@ -1,4 +1,4 @@
-exports.dmChats = async function (message, process, readline, DMActive) {
+exports.dmChats = async function (message, process, readline, DMActive) {//
   //
   if (message.channel.type === 'dm3456322'){
     process.stdout.write(`\n# ${message.author.username} DMed: ${message.content}\n`);

@@ -1,4 +1,4 @@
-exports.bootActives = async function (client, console, guildcount, members, activity) {
+exports.bootActives = async function (client, console, guildcount, members, activity) { //
 
     client.on('ready', () => {
         console.log(`# Logged in as ${client.user.tag}!`);

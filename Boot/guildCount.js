@@ -1,4 +1,4 @@
-exports.Gcunt = async function (client, console, guildcount, members, activity) {
+exports.Gcunt = async function (client, console, guildcount, members, activity) {//
     //
     client.on("guildCreate", async guild => {
       guildcount++;

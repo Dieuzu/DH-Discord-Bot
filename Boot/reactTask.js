@@ -1,4 +1,4 @@
-exports.reactTask = async function (client, taskLog, taskSign, taskComp) {
+exports.reactTask = async function (client, taskLog, taskSign, taskComp) {//
 
     client.on('messageReactionAdd', async (reaction, user) => {
         if (user.bot) return; // No reactions from bots

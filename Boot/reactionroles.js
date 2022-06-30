@@ -1,4 +1,4 @@
-exports.reactionRole = function (client) {
+exports.reactionRole = function (client) {//
     //IMPORTANT : You have to turn on "Server Members Intent" option to use this package properly. in https://discord.com/developers/applications/
     
     //const optionTest1 = client.createOption("🇦", "Obtained 'WATCH THIS' Role!", "Gave up 'WATCH THIS' Role!", ["890814402327117864",]);

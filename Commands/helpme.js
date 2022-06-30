@@ -1,4 +1,4 @@
-exports.helpMe = async function (command, message, args, speedy) {
+exports.helpMe = async function (command, message, args, speedy) {//
     if (command === "helpme") { // Help Me Command
         const sayMessage = args.join(" ");
         message.delete().catch(O_o=>{}); 

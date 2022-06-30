@@ -1,4 +1,4 @@
-exports.taskCmd = async function (command, message, console, args, Discord, taskLog) {
+exports.taskCmd = async function (command, message, console, args, Discord, taskLog) {//
   //
   if (command === "task") {
     message.delete().catch(O_o=>{});

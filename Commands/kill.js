@@ -1,4 +1,4 @@
-exports.kill = async function (command, args, message, speedy, console) {
+exports.kill = async function (command, args, message, speedy, console) {//
   // Watch this command
   if (command === "kill99299299229229429") {  // Code complete code modfied to rework later
     const sayMessage = args.join(" ");

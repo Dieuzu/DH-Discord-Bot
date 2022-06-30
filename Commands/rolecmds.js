@@ -1,4 +1,4 @@
-exports.roleCMDs = async function (command, message, console) {
+exports.roleCMDs = async function (command, message, console) {//
   // ROLE COMMANDS :
   if (command === "testrole754323552") { // role command
     message.delete().catch(O_o=>{});

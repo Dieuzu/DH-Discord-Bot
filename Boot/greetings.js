@@ -1,4 +1,4 @@
-exports.greetmeh = async function (message, msg, speedy, console, krizzi , supress, random) {
+exports.greetmeh = async function (message, msg, speedy, console, krizzi , supress, random) { //
   // Greetings!
   /*
   const hiz  = ["https://cdn.discordapp.com/attachments/805999578687471616/807302005294235718/hello-gif-a-nice-penguin-947098.gif", 

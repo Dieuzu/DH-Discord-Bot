@@ -1,4 +1,4 @@
-exports.cusRP = async function (command, message, args, console, supress, speedy, krizzi) {
+exports.cusRP = async function (command, message, args, console, supress, speedy, krizzi) {//
     //
       //======================
       if (command === "lag") { // Code complete

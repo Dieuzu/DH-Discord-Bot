@@ -1,4 +1,4 @@
-exports.cmdls = async function (message, msg, speedy, console, krizzi , supress) {
+exports.cmdls = async function (message, msg, speedy, console, krizzi , supress) {//
     // RP Expressions
 
     if (msg.startsWith("allgood")) { // look into this later

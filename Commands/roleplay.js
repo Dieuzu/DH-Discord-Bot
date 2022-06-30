@@ -1,4 +1,4 @@
-exports.rolePlay = async function (command, message, console, random, supress, speedy, krizzi, bot) {
+exports.rolePlay = async function (command, message, console, random, supress, speedy, krizzi, bot) {//
     
     // GIF's for the commands above
     const kizz  = [ "https://cdn.weeb.sh/images/ryEvhTOwW.gif", 

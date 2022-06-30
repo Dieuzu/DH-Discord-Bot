@@ -1,4 +1,4 @@
-exports.botStatus = async function (command, message, args, client, console, speedy, krizzi) {
+exports.botStatus = async function (command, message, args, client, console, speedy, krizzi) {//
     /*working code but sends error msgs  check later
     */
 

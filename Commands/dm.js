@@ -1,4 +1,4 @@
-exports.gidDM = async function (command, message, args, client, speedy, krizzi ) {
+exports.gidDM = async function (command, message, args, client, speedy, krizzi ) {//
     //
     if (command === "dm") {
       if (!message.member.roles.cache.some(r=>["💻Admin","i am Krizzi", "KrizziForce", "Krizzi", "Admin"].includes(r.name)) && message.author.id !== speedy && message.author.id !== krizzi)

@@ -1,4 +1,4 @@
-exports.miniGames = async function (command, args, message, console, speedy, krizzi) {
+exports.miniGames = async function (command, args, message, console, speedy, krizzi) {//
     //
     if (command === "roll") {
         const sayMessage = args.join(" ");

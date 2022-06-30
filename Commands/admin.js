@@ -1,4 +1,4 @@
-exports.admin = async function (command, args, message, speedy, krizzi, console) {
+exports.admin = async function (command, args, message, speedy, krizzi, console) {//
     if(command === "wipe") { // Add proper roles here dunt be monkey speedy
         const sayMessage = args.join(" ");
         message.delete().catch(O_o=>{});
