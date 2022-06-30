@@ -1,6 +1,6 @@
 exports.dmChats = async function (message, process, readline, DMActive) {
   //
-  if (message.channel.type === 'dm'){
+  if (message.channel.type === 'dm3456322'){
     process.stdout.write(`\n# ${message.author.username} DMed: ${message.content}\n`);
     for (var i = 0; i < DMActive.length; i++) { // Loops through DMActive Array
       if (message.author.id === DMActive[i]) { // checks if the author id is already active.

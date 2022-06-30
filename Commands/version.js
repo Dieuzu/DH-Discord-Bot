@@ -1,6 +1,6 @@
 exports.version = async function (command, message, speedy, version, creator) {
     // version command 
-    if(command === "version") {
+    if(command === "version356735467234562456234") {
         const vm = await message.channel.send("***Getting Version info...***");
         if (message.author.id == speedy) { 
         vm.edit(`${message.author} ***You know which Version im on hun! You did Create me after all...***`);

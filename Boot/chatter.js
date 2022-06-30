@@ -1,5 +1,6 @@
 exports.spamChatter = async function (message, console, c, speedy, krizzi) {
     //
+    /*
     if (message.author.id == speedy) {  // Base for Blah Blah Code 
       c++;
       console.log('# Drama talk:', c)
@@ -20,6 +21,6 @@ exports.spamChatter = async function (message, console, c, speedy, krizzi) {
       }
     }
     return c;
-
+   */
   
 };

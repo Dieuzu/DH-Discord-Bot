@@ -2,7 +2,7 @@ exports.bootActives = async function (client, console, guildcount, members, acti
 
     client.on('ready', () => {
         console.log(`# Logged in as ${client.user.tag}!`);
-        client.user.setActivity(`this! | !helpme`, { type: 'WATCHING', url: "https://open.spotify.com/playlist/6Q4ArkuNzSGI49GX4RlWxd?si=0XKQElCfS5WQ-SqO7ndrgQ" } );
+        client.user.setActivity(`FW Dragon Heart`, { type: 'Playing', url: "https://open.spotify.com/playlist/6Q4ArkuNzSGI49GX4RlWxd?si=0XKQElCfS5WQ-SqO7ndrgQ" } );
         //client.user.setActivity(activity[Math.floor(Math.random() * activity.length)]); // randomizer 
         //activityUpdate();
         client.guilds.cache.map( id => {

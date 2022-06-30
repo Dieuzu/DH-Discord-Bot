@@ -1,6 +1,6 @@
 exports.kill = async function (command, args, message, speedy, console) {
   // Watch this command
-  if (command === "kill") {  // Code complete
+  if (command === "kill99299299229229429") {  // Code complete code modfied to rework later
     const sayMessage = args.join(" ");
     message.delete().catch(O_o => { });
     const km = await message.channel.send("***Oh No!***");

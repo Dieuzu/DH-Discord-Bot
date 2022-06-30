@@ -1,6 +1,6 @@
 exports.roleCMDs = async function (command, message, console) {
   // ROLE COMMANDS :
-  if (command === "testrole") { // 🎮Gamer role command
+  if (command === "testrole754323552") { // role command
     message.delete().catch(O_o=>{});
     
     let role = message.guild.roles.cache.find(r => r.name == "TESTROLE");

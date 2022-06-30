@@ -39,7 +39,7 @@ require('dotenv').config();
       const db = new Database();
 // ------------------------------------------------------ People Constants
   const creator = 'Dieuzu#2369 & Krizzi#4234';
-  const bot = '<FIll something here>';
+  const bot = '755839458594783452';
   const speedy = '169685782494314496';
   const immune = '169685782494314496';
   const krizzi = '389172252786163727';

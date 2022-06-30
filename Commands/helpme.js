@@ -2,7 +2,7 @@ exports.helpMe = async function (command, message, args, speedy) {
     if (command === "helpme") { // Help Me Command
         const sayMessage = args.join(" ");
         message.delete().catch(O_o=>{}); 
-        
+        /* ----- uncomment later
         message.author.send(`Heya ${message.author}!`, {
           "embed": {"title": "List of Commands", "description": "List of Commands to use the '𝙂𝙞𝙙𝙚𝙤𝙣 (𝙄𝙄𝙏-𝟮𝟭)' Bot! Enjoy!", "color": 16758784,"timestamp": message.createdAt, "image": {
               "url": "https://cdn.discordapp.com/attachments/832805651309789194/832833919920504882/FINAL.gif" // <===image Link here
@@ -48,6 +48,6 @@ exports.helpMe = async function (command, message, args, speedy) {
                 {"name": "!harem",      "value": "Oh boy! you are in trouble!"},
               ]
             }
-        });
+        }); */
     }
 };

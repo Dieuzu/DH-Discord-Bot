@@ -2,7 +2,7 @@ exports.admin = async function (command, args, message, speedy, krizzi, console)
     if(command === "wipe") { // Add proper roles here dunt be monkey speedy
         const sayMessage = args.join(" ");
         message.delete().catch(O_o=>{});
-        if (!message.member.roles.cache.some(r=>["𝙭𝟲𝟰", "i am Krizzi", "KrizziForce", "Krizzi", "Admin"].includes(r.name)) && message.author.id !== speedy && message.author.id !== krizzi)
+        if (!message.member.roles.cache.some(r=>["💻Admin", "i am Krizzi", "KrizziForce", "Krizzi", "Admin"].includes(r.name)) && message.author.id !== speedy && message.author.id !== krizzi)
           return message.reply("***Sorry, you don't have permissions to use this!***");
         const deleteCount = parseInt(args[0], 10);
         if(!deleteCount || deleteCount < 2 || deleteCount > 100)
@@ -21,7 +21,7 @@ exports.admin = async function (command, args, message, speedy, krizzi, console)
     }
 
     if (command === "say") { // Add proper roles here dunt be monkey speedy
-      if (!message.member.roles.cache.some(r=>["𝙭𝟲𝟰", "i am Krizzi", "KrizziForce", "Krizzi", "Admin"].includes(r.name)) && message.author.id !== speedy && message.author.id !== krizzi)
+      if (!message.member.roles.cache.some(r=>["💻Admin", "i am Krizzi", "KrizziForce", "Krizzi", "Admin"].includes(r.name)) && message.author.id !== speedy && message.author.id !== krizzi)
         return message.reply("***Sorry, you don't have permissions to use this!***");
       const sayMessage = args.join(" ");
       message.delete().catch(O_o=>{}); 

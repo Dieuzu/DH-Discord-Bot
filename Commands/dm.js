@@ -1,7 +1,7 @@
 exports.gidDM = async function (command, message, args, client, speedy, krizzi ) {
     //
     if (command === "dm") {
-      if (!message.member.roles.cache.some(r=>["𝙭𝟲𝟰","i am Krizzi", "KrizziForce", "Krizzi", "Admin"].includes(r.name)) && message.author.id !== speedy && message.author.id !== krizzi)
+      if (!message.member.roles.cache.some(r=>["💻Admin","i am Krizzi", "KrizziForce", "Krizzi", "Admin"].includes(r.name)) && message.author.id !== speedy && message.author.id !== krizzi)
               return message.reply("Sorry, you don't have permissions to use this!");
       let sentmsg = 0
       const firstparam = args.splice(0, 1);
