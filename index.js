@@ -56,7 +56,7 @@ require('dotenv').config();
 
   gc.Gcunt(client, console, guildcount, members, activity);
 
-  rr.reactionRole(client);
+  //rr.reactionRole(client);
 
   wcum.Welcum(client, console);
 
