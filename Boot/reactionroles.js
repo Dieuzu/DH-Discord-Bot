@@ -1,10 +1,10 @@
 exports.reactionRole = function (client) {
     //IMPORTANT : You have to turn on "Server Members Intent" option to use this package properly. in https://discord.com/developers/applications/
-
-    const optionTest1 = client.createOption("🇦", "Obtained 'WATCH THIS' Role!", "Gave up 'WATCH THIS' Role!", ["890814402327117864",]);
-    const optionTest2 = client.createOption("🇧", "Obtained 'TESTROLE' Role!", "Gave up 'TESTROLE' Role!", ["890806432293867540",]);
-    const LIMIT = 160;
-    const RESTRICTIONS = [];
+    
+    //const optionTest1 = client.createOption("🇦", "Obtained 'WATCH THIS' Role!", "Gave up 'WATCH THIS' Role!", ["890814402327117864",]);
+    //const optionTest2 = client.createOption("🇧", "Obtained 'TESTROLE' Role!", "Gave up 'TESTROLE' Role!", ["890806432293867540",]);
+    //const LIMIT = 160;
+    //const RESTRICTIONS = [];
 
     /* //Commenting Out Role request code 
     const option1 = client.createOption("🇦", "Joined Group A", "Left Group A", ["806190622330454016",]); //806190622330454016 = ROLE ID
@@ -26,14 +26,14 @@ exports.reactionRole = function (client) {
 
     //================================================================================================
 
-    client.createMessage(
-      "890821509113843743",
-      "890811493900251136",
-      LIMIT,
-      RESTRICTIONS,
-      optionTest1,
-      optionTest2,
-    );
+    //client.createMessage(
+    //  "890821509113843743",
+    //  "890811493900251136",
+    //  LIMIT,
+    //  RESTRICTIONS,
+    //  optionTest1,
+    //  optionTest2,
+    //);
 
     /* //Commenting Out Role request code 
     client.createMessage(
